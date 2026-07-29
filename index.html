@@ -923,7 +923,7 @@ function buscarUsuarioTikTok(username) {
   resultDiv.style.display = 'block';
   
   // 1️⃣ Intentar API propia de Vercel
-  fetch('/api/tiktok?user=' + encodeURIComponent(limpio))
+  fetch('/api/tiktok?username=' + encodeURIComponent(limpio))
     .then(r => { if (r.ok) return r.json(); throw new Error('fail'); })
     .then(perfil => {
       tiktokProfileData = perfil;

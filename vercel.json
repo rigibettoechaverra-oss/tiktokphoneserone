@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/tiktok.js": {
+      "runtime": "nodejs@18.x"
+    }
+  }
+}
