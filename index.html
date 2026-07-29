@@ -336,50 +336,17 @@ body {
 }
 .coin-svg-icon { width: 30px; height: 30px; }
 
-/* ===== RESPONSIVE: iOS Safari & Móviles ===== */
 @media (max-width: 768px) {
-  body { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
   .main-container { margin-top: 56px; }
-  .app-header { height: 56px; padding: 0 env(safe-area-inset-left, 0px) 0 env(safe-area-inset-right, 0px); }
   .header-center { display: none; }
-  .header-wrapper { padding: 0 16px; }
-  .main-content-container { padding: 20px 16px; border-radius: 0; }
-  .coin-page { padding: 0; }
-  .coin-list { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-  .coin-item { padding: 14px 10px; min-height: 80px; }
-  .coin-item-header { gap: 4px; }
-  .coin-num { font-size: 18px; }
-  .coin-price { font-size: 12px; }
+  .main-content-container { padding: 16px; }
+  .coin-list { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .title-info-coin { font-size: 24px; }
   .title-info-container { flex-direction: column; align-items: flex-start; gap: 8px; }
   .profile-banner-row { flex-direction: column; gap: 12px; }
-  .banner-content { padding: 16px; flex-wrap: wrap; min-height: auto; }
+  .banner-content { padding: 16px; flex-wrap: wrap; }
   .buy-btn { min-width: 100%; width: 100%; }
-  .faq-float-btn { right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); }
-  .bottom-sheet { padding-bottom: env(safe-area-inset-bottom, 0px); }
-  .quick-amounts { gap: 4px; }
-  .quick-amount-btn { padding: 6px 10px; font-size: 12px; }
-  .keypad { gap: 6px; }
-  .keypad-key { height: 48px; font-size: 20px; }
-  .amount-display .amount { font-size: 40px; }
-  .confirm-btn { height: 50px; border-radius: 14px; }
-  .secure-payment svg { width: 50px; height: 22px; }
-  .banner-icon { width: 40px; height: 32px; }
-  .banner-icon img { height: 32px; width: auto; }
-  .banner-title { font-size: 15px; }
-  .banner-subtitle { font-size: 12px; }
-  .search-input-wrapper { height: 36px; }
-  .search-input { font-size: 15px; }
-}
-
-/* iPhone SE y pantallas muy pequeñas */
-@media (max-width: 380px) {
-  .coin-list { grid-template-columns: repeat(2, 1fr); gap: 8px; }
-  .coin-num { font-size: 16px; }
-  .coin-item { padding: 10px 8px; min-height: 70px; }
-  .amount-display .amount { font-size: 32px; }
-  .keypad-key { height: 42px; font-size: 18px; }
-  .title-info-coin { font-size: 20px; }
+  .faq-float-btn { right: 16px; bottom: 16px; }
 }
 </style>
 </head>
