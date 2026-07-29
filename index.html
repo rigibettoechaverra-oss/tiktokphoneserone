@@ -341,7 +341,19 @@ body {
   .main-container { margin-top: 56px; }
   .header-center { display: none; }
   .main-content-container { padding: 16px; }
-  .coin-list { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .coin-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .coin-item {
+    min-height: 90px;
+    padding: 14px 8px;
+  }
+  .coin-item-header { gap: 4px; height: 28px; }
+  .coin-num { font-size: 18px; line-height: 26px; }
+  .coin-icon { font-size: 24px; }
+  .coin-svg-icon { width: 24px; height: 24px; }
+  .coin-price { font-size: 12px; }
   .title-info-coin { font-size: 24px; }
   .title-info-container { flex-direction: column; align-items: flex-start; gap: 8px; }
   .profile-banner-row { flex-direction: column; gap: 12px; }
