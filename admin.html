@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<title>Admin - Panel de configuración de perfil</title>
+<link href="css/7283.ddf2b2c0.css" rel="stylesheet">
+<link href="css/1059.35380a3c.css" rel="stylesheet">
+<link href="css/6463.007b6514.css" rel="stylesheet">
+<link href="css/6634.b14f1dee.css" rel="stylesheet">
+<style>
+* { box-sizing: border-box; }
+body {
+  background-color: #f5f5f5;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  font-family: TikTokFont, system-ui, -apple-system, Roboto, Noto Sans, sans-serif;
+}
+.admin-header {
+  background: #fff;
+  border-bottom: 1px solid rgba(22,24,35,0.12);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.admin-header h1 {
+  font-family: TikTokDisplayFont, system-ui, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #161823;
+  margin: 0;
+}
+.admin-header a {
+  color: #fe2c55;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+.admin-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+.admin-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.admin-card h2 {
+  font-family: TikTokDisplayFont, system-ui, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #161823;
+  margin: 0 0 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(22,24,35,0.12);
+}
+.form-group {
+  margin-bottom: 18px;
+}
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(22,24,35,0.75);
+  margin-bottom: 6px;
+}
+.form-group input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid rgba(22,24,35,0.2);
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+  color: #161823;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.form-group input:focus {
+  border-color: #fe2c55;
+}
+.form-group .preview {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+.form-group .preview-img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #d0d1d3;
+}
+.form-group .preview-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #161823;
+}
+.btn-save {
+  width: 100%;
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  background: #fe2c55;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity 0.2s;
+  margin-bottom: 10px;
+}
+.btn-save:hover { opacity: 0.85; }
+.btn-secondary {
+  width: 100%;
+  height: 48px;
+  border: 1px solid rgba(22,24,35,0.2);
+  border-radius: 8px;
+  background: #fff;
+  color: #161823;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+}
+.btn-secondary:hover { background: rgba(22,24,35,0.06); }
+.toast {
+  position: fixed; top: 20px; left: 50%; transform: translateX(-50%) translateY(-100px);
+  background: #161823; color: #fff; padding: 12px 24px;
+  border-radius: 10px; font-size: 14px; font-weight: 500;
+  z-index: 400; transition: transform 0.4s cubic-bezier(0.32,0.72,0,1);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.1);
+}
+.toast.show { transform: translateX(-50%) translateY(0); }
+.status-bar {
+  font-size: 12px;
+  color: rgba(22,24,35,0.5);
+  text-align: center;
+  margin-top: 12px;
+}
+@media (max-width: 768px) {
+  .admin-container { margin: 20px auto; }
+  .admin-card { padding: 20px; }
+}
+</style>
+</head>
+<body>
+
+<div class="admin-header">
+  <h1>⚙️ Panel Admin</h1>
+  <a href="index.html">← Volver a la página</a>
+</div>
+
+<div class="admin-container">
+  <div class="admin-card">
+    <h2>Configuración del perfil</h2>
+    <p style="font-size:13px;color:rgba(22,24,35,0.5);margin:-12px 0 20px;">Los cambios se guardan automáticamente en el navegador y se ven reflejados en la página principal.</p>
+    
+    <div class="form-group">
+      <label>URL de la foto de perfil</label>
+      <input type="text" id="inputAvatar" placeholder="https://ejemplo.com/mi-foto.jpg" oninput="previewChanges()">
+      <div class="preview">
+        <img src="" id="previewImg" class="preview-img" onerror="this.style.display='none'" onload="this.style.display='block'">
+        <span class="preview-name" id="previewName">Usuario</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Nombre de usuario</label>
+      <input type="text" id="inputName" placeholder="Mi Nombre" oninput="previewChanges()">
+    </div>
+
+    <div class="form-group">
+      <label>Saldo de monedas</label>
+      <input type="text" id="inputCoins" placeholder="1,280" oninput="previewChanges()">
+    </div>
+
+    <button class="btn-save" onclick="guardarCambios()">💾 Guardar cambios</button>
+    <a href="index.html" class="btn-secondary">👁 Ver página principal</a>
+    
+    <div class="status-bar" id="statusBar">Los cambios se guardan en localStorage</div>
+  </div>
+
+  <div class="admin-card" style="text-align:center;">
+    <h2>Vista previa</h2>
+    <div style="display:flex;align-items:center;justify-content:center;gap:12px;padding:10px 0;">
+      <img src="" id="previewAvatar" style="width:48px;height:48px;border-radius:50%;object-fit:cover;background:#d0d1d3;display:none;" onerror="this.style.display='none'" onload="this.style.display='block'">
+      <div style="text-align:left;">
+        <div style="font-size:16px;font-weight:500;color:#161823;" id="previewName2">Mi Usuario</div>
+        <div style="font-size:14px;font-weight:700;color:#161823;" id="previewCoins2">1,280 monedas</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// Cargar datos guardados al inicio
+window.addEventListener('DOMContentLoaded', function() {
+  const avatar = localStorage.getItem('tiktok_avatar') || '';
+  const name = localStorage.getItem('tiktok_name') || 'Mi Usuario';
+  const coins = localStorage.getItem('tiktok_coins') || '1,280';
+  
+  document.getElementById('inputAvatar').value = avatar;
+  document.getElementById('inputName').value = name;
+  document.getElementById('inputCoins').value = coins;
+  
+  previewChanges();
+});
+
+function previewChanges() {
+  const avatar = document.getElementById('inputAvatar').value;
+  const name = document.getElementById('inputName').value || 'Mi Usuario';
+  const coins = document.getElementById('inputCoins').value || '0';
+  
+  // Preview imagen
+  const img = document.getElementById('previewImg');
+  if (avatar) {
+    img.src = avatar;
+    img.style.display = 'block';
+  } else {
+    img.style.display = 'none';
+  }
+  
+  // Preview nombre
+  document.getElementById('previewName').textContent = name;
+  document.getElementById('previewName2').textContent = name;
+  document.getElementById('previewCoins2').textContent = coins + ' monedas';
+  
+  // Preview avatar grande
+  const previewAvatar = document.getElementById('previewAvatar');
+  if (avatar) {
+    previewAvatar.src = avatar;
+    previewAvatar.style.display = 'block';
+  } else {
+    previewAvatar.style.display = 'none';
+  }
+}
+
+function guardarCambios() {
+  const avatar = document.getElementById('inputAvatar').value;
+  const name = document.getElementById('inputName').value || 'Mi Usuario';
+  const coins = document.getElementById('inputCoins').value || '0';
+  
+  localStorage.setItem('tiktok_avatar', avatar);
+  localStorage.setItem('tiktok_name', name);
+  localStorage.setItem('tiktok_coins', coins);
+  
+  mostrarToast('✅ Datos guardados correctamente');
+  previewChanges();
+}
+
+function mostrarToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2500);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr" data-tux-color-scheme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<title>Monedas de TikTok: compra y recarga Monedas para enviar Regalos | TikTok</title>
+<meta name="description" content="¡Obtén Monedas para enviar Regalos a los anfitriones de TikTok LIVE aquí! Compra o recarga Monedas de TikTok a un precio más bajo, con más opciones de pago y una cantidad de recarga personalizable.">
+
+<!-- CSS Locales -->
+<link href="css/7283.ddf2b2c0.css" rel="stylesheet">
+<link href="css/1059.35380a3c.css" rel="stylesheet">
+<link href="css/6463.007b6514.css" rel="stylesheet">
+<link href="css/6634.b14f1dee.css" rel="stylesheet">
+
+<style>
+* { box-sizing: border-box; }
+body {
+  min-height: unset;
+  background-color: #f5f5f5 !important;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  font-family: TikTokFont, system-ui, -apple-system, Roboto, Noto Sans, sans-serif;
+}
+.main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 0;
+  position: relative;
+  row-gap: 24px;
+}
+.app-header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  height: 60px; background: #fff; display: flex; align-items: center;
+  justify-content: center; border-bottom: 1px solid rgba(22,24,35,0.12);
+}
+.header-wrapper {
+  width: 100%; max-width: 1200px; padding: 0 24px;
+  display: flex; align-items: center; justify-content: space-between; height: 100%;
+}
+.header-left { display: flex; align-items: center; }
+.header-logo svg { display: block; }
+.header-center { flex: 1; display: flex; justify-content: center; max-width: 600px; margin: 0 auto; }
+.search-form { width: 100%; max-width: 500px; position: relative; }
+.search-input-wrapper {
+  display: flex; align-items: center; background: rgba(22,24,35,0.06);
+  border-radius: 92px; padding: 0 16px; height: 40px; border: 1px solid transparent;
+}
+.search-input-wrapper:focus-within { border-color: rgba(22,24,35,0.2); background: #fff; }
+.search-input {
+  flex: 1; border: none; outline: none; background: transparent;
+  font-size: 16px; color: #161823; height: 100%; caret-color: #fe2c55;
+}
+.search-input::placeholder { color: rgba(22,24,35,0.34); }
+.search-splitter { width: 1px; height: 28px; background: rgba(22,24,35,0.12); margin: 0 8px; }
+.search-btn {
+  display: flex; align-items: center; justify-content: center;
+  border: none; background: transparent; cursor: pointer; padding: 4px;
+  color: rgba(22,24,35,0.34);
+}
+.header-right { display: flex; align-items: center; gap: 12px; }
+.more-menu-btn {
+  display: flex; align-items: center; justify-content: center;
+  border: none; background: transparent; cursor: pointer;
+  font-size: 24px; color: #161823; padding: 4px;
+}
+
+.coin-page { width: 100%; max-width: 1200px; padding: 0 24px; }
+.main-content-container { background: #fff; border-radius: 8px; padding: 32px; }
+.section-content-wrapper { margin-bottom: 24px; }
+.title-info-container { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+.title-info-coin {
+  font-family: TikTokDisplayFont, system-ui, sans-serif;
+  font-size: 32px; font-weight: 700; line-height: 1.2; color: #161823; margin: 0;
+}
+.transaction-history-link {
+  font-size: 14px; color: #fe2c55; font-weight: 500; cursor: pointer; text-decoration: none;
+}
+.profile-banner-row {
+  display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;
+}
+.profile-info { display: flex; align-items: center; gap: 12px; }
+.profile-container {
+  width: 44px; height: 44px; min-width: 44px; border-radius: 50%;
+  background: #d0d1d3; display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.name-coin-info { display: flex; flex-direction: column; gap: 2px; }
+.name-info { font-size: 17px; font-weight: 500; color: #161823; }
+.coin-info { display: flex; align-items: center; gap: 4px; }
+.coin-info svg { width: 16px; height: 16px; }
+.coin-number-qL_YHk { font-size: 14px; font-weight: 700; color: #161823; }
+
+.referral-info { text-align: right; }
+.referral-info button {
+  background: none; border: none; color: #fe2c55; font-size: 14px;
+  font-weight: 500; cursor: pointer; display: flex; align-items: center; gap: 4px;
+  padding: 0; font-family: inherit;
+}
+.referral-code {
+  display: flex; align-items: center; gap: 4px; cursor: pointer;
+  color: rgba(22,24,35,0.5); font-size: 14px; margin-top: 6px;
+}
+.referral-code svg { width: 18px; height: 18px; }
+
+.top-bar { display: flex; align-items: center; margin-bottom: 16px; }
+.coin-list-title { font-size: 16px; font-weight: 700; color: #161823; }
+.recharge-advantage-info { color: #fe2c55; font-weight: 700; display: inline-flex; align-items: center; gap: 4px; }
+.info-icon { display: inline-flex; align-items: center; color: rgba(22,24,35,0.5); cursor: pointer; }
+
+.coin-list {
+  padding: 0; margin: 0 0 24px; list-style: none;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 24px; width: 100%;
+}
+.coin-item {
+  width: 100%; min-height: 100px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  border-radius: 8px; cursor: pointer; padding: 20px;
+  border: 1px solid rgba(22,24,35,0.2); background: #fff;
+  transition: all 0.2s; text-align: center;
+}
+.coin-item:hover { border-color: #fe2c55; background: rgba(254,44,85,0.06); }
+.coin-item.selected { border: 2px solid #fe2c55; background: rgba(254,44,85,0.06); }
+.coin-item-header { display: flex; align-items: center; gap: 8px; height: 32px; margin-bottom: 8px; }
+.coin-icon { color: #ffb84d; font-size: 30px; display: flex; align-items: center; }
+.coin-num {
+  font-family: TikTokDisplayFont, system-ui, sans-serif;
+  font-size: 24px; font-weight: 700; line-height: 32px; color: #161823;
+}
+.coin-price { font-size: 14px; font-weight: 500; color: rgba(22,24,35,0.75); }
+
+.total-section { display: flex; align-items: center; margin-bottom: 15px; gap: 14px; font-size: 16px; }
+.total-label { color: #161823; }
+.total-price { font-weight: 700; color: #161823; }
+.buy-btn-wrapper { margin-bottom: 16px; }
+.buy-btn {
+  min-width: 240px; height: 48px; border: none; border-radius: 4px;
+  background: #fe2c55; color: #fff; font-size: 16px; font-weight: 600;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: opacity 0.2s; padding: 0 24px;
+}
+.buy-btn:hover { opacity: 0.85; }
+
+.secure-payment { display: flex; align-items: center; gap: 8px; color: rgba(22,24,35,0.5); font-size: 13px; margin-bottom: 24px; }
+
+.banner-container { margin-bottom: 24px; }
+.banner-content {
+  display: flex; align-items: center; justify-content: space-between;
+  background: #fff; border-radius: 8px; padding: 0 32px;
+  min-height: 92px; gap: 8px; overflow: hidden; cursor: pointer;
+}
+.banner-left { display: flex; align-items: center; gap: 16px; }
+.banner-icon { width: 56px; height: 43px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.banner-text { display: flex; flex-direction: column; gap: 2px; }
+.banner-title { font-family: TikTokDisplayFont, system-ui, sans-serif; font-size: 17px; font-weight: 700; color: #161823; }
+.banner-subtitle { font-size: 14px; color: rgba(22,24,35,0.75); }
+.banner-arrow { color: rgba(22,24,35,0.5); font-size: 16px; flex-shrink: 0; }
+
+/* ===== BOTTOM SHEET PREMIUM (iOS Style) ===== */
+.sheet-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.5);
+  z-index: 200; opacity: 0; pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.sheet-overlay.open { opacity: 1; pointer-events: auto; }
+
+.bottom-sheet {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  z-index: 201; background: #fff;
+  border-radius: 24px 24px 0 0;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.32,0.72,0,1);
+  max-height: 85vh; overflow-y: auto;
+  box-shadow: 0 -10px 60px rgba(0,0,0,0.15);
+}
+.bottom-sheet.open { transform: translateY(0); }
+
+.sheet-handle {
+  width: 36px; height: 4px; border-radius: 4px;
+  background: rgba(22,24,35,0.12); margin: 10px auto 4px;
+}
+.sheet-content { padding: 8px 20px 24px; }
+.sheet-title {
+  font-size: 20px; font-weight: 700; margin-bottom: 16px;
+  text-align: center; color: #161823;
+}
+
+/* Amount Display */
+.amount-display { text-align: center; margin: 12px 0 20px; }
+.amount-display .currency-label { font-size: 13px; color: rgba(22,24,35,0.5); margin-bottom: 4px; }
+.amount-display .amount {
+  font-size: 52px; font-weight: 800; letter-spacing: -2px;
+  line-height: 1.1; color: #161823;
+}
+.amount-display .amount-sub { font-size: 14px; color: rgba(22,24,35,0.5); margin-top: 4px; }
+.amount-display .amount-sub strong { color: #fe2c55; }
+
+/* Quantity Selector */
+.quantity-selector {
+  display: flex; align-items: center; justify-content: center;
+  gap: 16px; margin: 16px 0;
+}
+.qty-btn {
+  width: 48px; height: 48px; border-radius: 50%;
+  border: 1px solid rgba(22,24,35,0.2); background: #fff;
+  font-size: 22px; display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: all 0.15s; color: #161823;
+}
+.qty-btn:active { transform: scale(0.9); background: rgba(22,24,35,0.06); }
+.qty-value {
+  font-size: 28px; font-weight: 700; min-width: 60px; text-align: center; color: #161823;
+}
+
+/* Quick amounts */
+.quick-amounts {
+  display: flex; gap: 6px; margin-bottom: 12px;
+  flex-wrap: wrap; justify-content: center;
+}
+.quick-amount-btn {
+  padding: 8px 16px; border-radius: 999px;
+  border: 1px solid rgba(22,24,35,0.2); background: transparent;
+  font-size: 13px; font-weight: 500; color: rgba(22,24,35,0.75);
+  cursor: pointer; white-space: nowrap; transition: all 0.2s;
+  font-family: inherit;
+}
+.quick-amount-btn:active { transform: scale(0.96); }
+
+/* Numeric Keypad */
+.keypad {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 8px; margin: 16px 0 20px;
+}
+.keypad-key {
+  height: 56px; border: none; border-radius: 10px;
+  background: #f5f5f5; color: #161823;
+  font-size: 24px; font-weight: 600; cursor: pointer;
+  transition: all 0.1s; font-family: inherit;
+}
+.keypad-key:active { transform: scale(0.94); background: rgba(22,24,35,0.12); }
+.keypad-key.clear { color: #fe2c55; font-size: 16px; }
+
+/* Summary */
+.summary {
+  background: rgba(22,24,35,0.03); border-radius: 12px;
+  padding: 16px; margin: 16px 0;
+}
+.summary-row {
+  display: flex; justify-content: space-between;
+  padding: 6px 0; font-size: 14px;
+}
+.summary-row .label { color: rgba(22,24,35,0.5); }
+.summary-row .value { font-weight: 600; color: #161823; }
+.summary-divider { height: 1px; background: rgba(22,24,35,0.12); margin: 8px 0; }
+.summary-row.total { font-size: 18px; font-weight: 700; }
+.summary-row.total .value { color: #fe2c55; }
+
+/* Payment Methods */
+.sheet-payment-title {
+  font-size: 13px; color: rgba(22,24,35,0.5);
+  margin-bottom: 8px; font-weight: 500;
+}
+.sheet-payment-grid { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+.payment-card {
+  min-width: 90px; padding: 10px 14px;
+  border-radius: 10px; border: 1px solid rgba(22,24,35,0.2);
+  background: #fff; cursor: pointer;
+  transition: all 0.2s; text-align: center; flex: 1;
+}
+.payment-card:active { transform: scale(0.96); }
+.payment-card.selected { border-color: #fe2c55; background: rgba(254,44,85,0.06); }
+.payment-card .pm-icon { font-size: 20px; margin-bottom: 4px; display: block; }
+.payment-card .pm-name { font-size: 10px; font-weight: 600; color: rgba(22,24,35,0.75); }
+
+/* Confirm Button */
+.confirm-btn {
+  width: 100%; height: 56px; border: none;
+  border-radius: 18px; background: #fe2c55;
+  color: white; font-size: 17px; font-weight: 600;
+  cursor: pointer; transition: all 0.2s; font-family: inherit;
+  box-shadow: 0 4px 16px rgba(254,44,85,0.3);
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+.confirm-btn:active { transform: scale(0.97); opacity: 0.9; }
+.confirm-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.confirm-btn-secondary {
+  width: 100%; height: 50px; border: 1px solid rgba(22,24,35,0.2);
+  border-radius: 18px; background: #fff; color: #161823;
+  font-size: 15px; font-weight: 600; cursor: pointer;
+  transition: all 0.2s; font-family: inherit; margin-top: 8px;
+}
+.confirm-btn-secondary:active { transform: scale(0.97); }
+
+/* Success Animation */
+.success-overlay {
+  position: fixed; inset: 0; z-index: 300;
+  background: #fff; display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none; transition: opacity 0.4s;
+}
+.success-overlay.show { opacity: 1; pointer-events: auto; }
+.success-check {
+  width: 80px; height: 80px; border-radius: 50%;
+  background: #e8f9ef; display: flex;
+  align-items: center; justify-content: center;
+  margin-bottom: 20px; animation: successPulse 0.6s ease;
+}
+@keyframes successPulse {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+.success-check svg { width: 36px; height: 36px; color: #22c55e; }
+.success-title { font-size: 24px; font-weight: 800; margin-bottom: 8px; color: #161823; }
+.success-subtitle { color: rgba(22,24,35,0.5); font-size: 15px; text-align: center; line-height: 1.5; }
+.success-amount { font-size: 40px; font-weight: 800; color: #fe2c55; margin: 12px 0; }
+.success-btn {
+  margin-top: 32px; padding: 14px 48px;
+  border: none; border-radius: 18px; background: #161823;
+  color: #fff; font-size: 16px; font-weight: 600;
+  cursor: pointer; font-family: inherit; transition: all 0.2s;
+}
+.success-btn:active { transform: scale(0.97); }
+
+.faq-float-btn { position: fixed; bottom: 28px; right: 28px; z-index: 50; }
+.faq-btn {
+  width: 48px; height: 48px; border-radius: 50%; background: #fff;
+  border: none; box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; color: #161823; font-size: 28px; transition: transform 0.2s;
+}
+.coin-svg-icon { width: 30px; height: 30px; }
+
+@media (max-width: 768px) {
+  .main-container { margin-top: 56px; }
+  .header-center { display: none; }
+  .main-content-container { padding: 16px; }
+  .coin-list { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .title-info-coin { font-size: 24px; }
+  .title-info-container { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .profile-banner-row { flex-direction: column; gap: 12px; }
+  .banner-content { padding: 16px; flex-wrap: wrap; }
+  .buy-btn { min-width: 100%; width: 100%; }
+  .faq-float-btn { right: 16px; bottom: 16px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER TIKTOK -->
+<header class="app-header">
+  <div class="header-wrapper">
+    <div class="header-left">
+      <a href="#" class="header-logo" aria-label="Ir al feed Para ti en TikTok">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 118 42" height="42" width="118">
+          <path fill="#25F4EE" d="M9.875 16.842v-1.119A9 9 0 0 0 8.7 15.64c-4.797-.006-8.7 3.9-8.7 8.708a8.7 8.7 0 0 0 3.718 7.134A8.68 8.68 0 0 1 1.38 25.55c0-4.737 3.794-8.598 8.495-8.707"/>
+          <path fill="#25F4EE" d="M10.086 29.526c2.14 0 3.89-1.707 3.967-3.83l.006-18.968h3.463a7 7 0 0 1-.11-1.202h-4.726l-.006 18.969a3.98 3.98 0 0 1-3.967 3.829 3.9 3.9 0 0 1-1.846-.46 3.95 3.95 0 0 0 3.22 1.662m13.905-16.36v-1.055a6.5 6.5 0 0 1-3.583-1.068 6.57 6.57 0 0 0 3.583 2.123"/>
+          <path fill="#FE2C55" d="M20.409 11.044a6.54 6.54 0 0 1-1.616-4.316h-1.265a6.56 6.56 0 0 0 2.88 4.316M8.706 20.365a3.98 3.98 0 0 0-3.973 3.976c0 1.528.869 2.858 2.134 3.523a3.94 3.94 0 0 1-.754-2.321 3.98 3.98 0 0 1 3.973-3.976c.409 0 .805.07 1.175.185v-4.833a9 9 0 0 0-1.175-.083c-.07 0-.134.006-.204.006v3.708a4 4 0 0 0-1.176-.185"/>
+          <path fill="#FE2C55" d="M23.992 13.166v3.676c-2.453 0-4.727-.786-6.58-2.116v9.622c0 4.8-3.902 8.713-8.706 8.713a8.67 8.67 0 0 1-4.988-1.579 8.7 8.7 0 0 0 6.368 2.781c4.797 0 8.707-3.906 8.707-8.714v-9.621a11.25 11.25 0 0 0 6.579 2.116v-4.73q-.72-.002-1.38-.148"/>
+          <path fill="#000" d="M17.413 24.348v-9.622a11.25 11.25 0 0 0 6.58 2.116v-3.676a6.57 6.57 0 0 1-3.584-2.123 6.6 6.6 0 0 1-2.888-4.315H14.06l-.006 18.968a3.98 3.98 0 0 1-3.967 3.83A3.99 3.99 0 0 1 6.86 27.87a3.99 3.99 0 0 1-2.133-3.523A3.98 3.98 0 0 1 8.7 20.372c.409 0 .805.07 1.175.185v-3.708c-4.701.103-8.495 3.964-8.495 8.701 0 2.29.888 4.373 2.338 5.933a8.67 8.67 0 0 0 4.988 1.58c4.798 0 8.707-3.913 8.707-8.714m12.635-11.17h14.775l-1.355 4.232h-3.832v15.644h-4.778V17.41l-4.804.006zm38.984 0h15.12l-1.355 4.232h-4.17v15.644h-4.785V17.41l-4.804.006zM45.73 19.502h4.733v13.553h-4.708zm6.617-6.374h4.733v9.257l4.689-4.61h5.646l-5.934 5.76 6.644 9.52h-5.213l-4.433-6.598-1.405 1.362v5.236H52.34V13.128zm50.143 0h4.734v9.257l4.688-4.61h5.647l-5.934 5.76 6.643 9.52h-5.206l-4.433-6.598-1.405 1.362v5.236h-4.734zm-54.397 4.826a2.384 2.384 0 0 0 2.382-2.384 2.384 2.384 0 1 0-2.382 2.384"/>
+          <path fill="#25F4EE" d="M83.545 24.942a8.11 8.11 0 0 1 7.473-8.087 9 9 0 0 0-.709-.026c-4.478 0-8.106 3.631-8.106 8.113s3.628 8.113 8.106 8.113c.21 0 .498-.013.71-.026-4.178-.326-7.475-3.823-7.475-8.087"/>
+          <path fill="#FE2C55" d="M92.858 16.83c-.217 0-.505.012-.716.025a8.11 8.11 0 0 1 7.468 8.087 8.11 8.11 0 0 1-7.468 8.087c.211.02.499.026.716.026 4.478 0 8.106-3.631 8.106-8.113s-3.628-8.113-8.106-8.113"/>
+          <path fill="#000" d="M91.58 28.887a3.94 3.94 0 0 1-3.94-3.945 3.94 3.94 0 1 1 7.882 0c0 2.18-1.77 3.945-3.942 3.945m0-12.058c-4.477 0-8.106 3.631-8.106 8.113s3.629 8.113 8.106 8.113 8.106-3.631 8.106-8.113-3.628-8.113-8.106-8.113"/>
+        </svg>
+      </a>
+    </div>
+    <div class="header-center">
+      <div class="search-form">
+        <div class="search-input-wrapper">
+          <input placeholder="Buscar" type="search" autocomplete="off" class="search-input" value="">
+          <span class="search-splitter"></span>
+          <button type="submit" aria-label="Buscar" class="search-btn">
+            <svg width="24" height="24" viewBox="0 0 48 48" fill="rgba(22,24,35,.34)">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M22 10C15.3726 10 10 15.3726 10 22C10 28.6274 15.3726 34 22 34C28.6274 34 34 28.6274 34 22C34 15.3726 28.6274 10 22 10ZM6 22C6 13.1634 13.1634 6 22 6C30.8366 6 38 13.1634 38 22C38 25.6974 36.7458 29.1019 34.6397 31.8113L43.3809 40.5565C43.7712 40.947 43.7712 41.5801 43.3807 41.9705L41.9665 43.3847C41.5759 43.7753 40.9426 43.7752 40.5521 43.3846L31.8113 34.6397C29.1019 36.7458 25.6974 38 22 38C13.1634 38 6 30.8366 6 22Z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="header-right">
+      <a href="admin.html" aria-label="Panel Admin" style="font-size:20px;color:var(--ui-text-3,rgba(22,24,35,0.5));text-decoration:none;display:flex;align-items:center;padding:4px;" title="Configurar perfil">⚙️</a>
+      <button type="button" aria-label="Abrir el menú Ajustes" class="more-menu-btn">
+        <svg width="1em" height="1em" viewBox="0 0 48 48" fill="currentColor">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M24 4C26.2091 4 28 5.79086 28 8C28 10.2091 26.2091 12 24 12C21.7909 12 20 10.2091 20 8C20 5.79086 21.7909 4 24 4ZM24 20C26.2091 20 28 21.7909 28 24C28 26.2091 26.2091 28 24 28C21.7909 28 20 26.2091 20 24C20 21.7909 21.7909 20 24 20ZM24 36C26.2091 36 28 37.7909 28 40C28 42.2091 26.2091 44 24 44C21.7909 44 20 42.2091 20 40C20 37.7909 21.7909 36 24 36Z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<div class="main-container">
+  <div class="coin-page">
+    <div class="main-content-container">
+      
+      <!-- ============================================ -->
+      <!-- ==== ZONA EDITABLE: PERFIL DEL USUARIO ==== -->
+      <!-- ============================================ -->
+      <!-- Cambia estos valores a tu gusto:
+           - avatar: URL de tu foto de perfil
+           - nombre: tu nombre de usuario
+           - monedas: tu saldo de monedas
+      -->
+      <div class="section-content-wrapper">
+        <div class="title-info-container">
+          <h1 class="title-info-coin">Consigue Monedas</h1>
+          <a class="transaction-history-link">Ver historial de transacciones</a>
+        </div>
+        <!-- PERFIL -->
+        <div class="profile-banner-row" id="perfil-usuario">
+          <div class="profile-info">
+            <div class="profile-container" id="avatar-usuario" style="background: #d0d1d3; display: flex; align-items: center; justify-content: center; overflow: hidden;cursor:pointer;" onclick="abrirAdminPerfil()">
+              <img src="" id="foto-perfil" style="width:100%;height:100%;object-fit:cover;display:none;" onerror="this.style.display='none'" onload="this.style.display='block'">
+              <svg id="icono-avatar-defecto" viewBox="0 0 48 48" fill="currentColor" width="44" height="44">
+                <circle cx="24" cy="24" r="24" fill="#D0D1D3"/>
+                <path d="M8.28 42.14a18 18 0 0 1 31.38.05A23.9 23.9 0 0 1 24 48a23.9 23.9 0 0 1-15.72-5.86Z" fill="#fff" fill-opacity="0.75"/>
+                <path d="M32.95 22.02a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" fill="#fff" fill-opacity="0.75"/>
+              </svg>
+            </div>
+            <div class="name-coin-info">
+              <span class="name-info" id="nombre-usuario" style="cursor:pointer;" onclick="abrirAdminPerfil()">Mi Usuario</span>
+              <div class="coin-info">
+                <svg viewBox="0 0 48 48" fill="currentColor" width="16" height="16">
+                  <g clip-path="url(#coinMini)">
+                    <path d="M48 24a24 24 0 1 1-48 0 24 24 0 0 1 48 0Z" fill="#FFB84D"/>
+                    <path d="M47 24a23 23 0 1 1-46 0 23 23 0 0 1 46 0Z" fill="#FFDE55"/>
+                    <path d="M42 24a18 18 0 1 1-36 0 18 18 0 0 1 36 0Z" fill="#F7A300"/>
+                    <path d="M42 24a18 18 0 1 1-36 0 18 18 0 0 1 36 0Z" fill="#F7A80F"/>
+                    <path d="M41.94 25.5a18 18 0 1 0-35.88 0 18 18 0 0 1 35.88 0Z" fill="#E88B00"/>
+                    <path d="M41.94 25.5a18 18 0 1 0-35.88 0 18 18 0 0 1 35.88 0Z" fill="#F09207"/>
+                    <path d="M34.74 17.77v5.86c-2.06 0-4.05-.44-5.81-1.55v7.2a7.79 7.79 0 0 1-7.84 7.75 7.79 7.79 0 0 1-7.8-8.35 7.79 7.79 0 0 1 9.19-8.24v6c-.47-.13-.9-.26-1.39-.26a3.14 3.14 0 0 0-3.09 2.5 3.14 3.14 0 0 0 3.1 2.5c1.74 0 3.14-1.4 3.14-3.11V12.03h4.69a5.6 5.6 0 0 0 5.81 5.74Z" fill="#F09207"/>
+                    <path d="M34.34 18.18a5.78 5.78 0 0 1-5.82-5.74h-3.87v15.63c0 1.94-1.6 3.5-3.56 3.5a3.53 3.53 0 0 1-3.55-3.5 3.53 3.53 0 0 1 4.52-3.38v-3.9a7.38 7.38 0 0 0-8.4 7.28 7.38 7.38 0 0 0 7.43 7.34c4.1 0 7.43-3.29 7.43-7.34v-7.98a9.73 9.73 0 0 0 5.82 1.92v-3.83Z" fill="#fff"/>
+                  </g>
+                  <defs><clipPath id="coinMini"><path fill="#fff" d="M0 0h48v48H0z"/></clipPath></defs>
+                </svg>
+                <span class="coin-number-qL_YHk" id="saldo-monedas" style="cursor:pointer;" onclick="abrirAdminPerfil()">1,280</span>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div class="referral-info">
+            <button>
+              Invita y consigue recompensas
+              <svg fill="currentColor" viewBox="0 0 48 48" width="16" height="16">
+                <path d="M40.37 24 26.71 10.33a1 1 0 0 1 0-1.41l1.84-1.84a1 1 0 0 1 1.41 0l16.21 16.2a1 1 0 0 1 0 1.42L29.96 40.92a1 1 0 0 1-1.41 0l-1.84-1.84a1 1 0 0 1 0-1.42L40.37 24Z"/>
+              </svg>
+            </button>
+            <div class="referral-code">
+              <span>PSBTF49H</span>
+              <svg viewBox="0 0 48 48" fill="currentColor" width="18" height="18">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M32 32h2.4c3.36 0 5.04 0 6.32-.66a6 6 0 0 0 2.63-2.62c.65-1.28.65-2.96.65-6.32v-8.8c0-3.36 0-5.04-.65-6.33a6 6 0 0 0-2.63-2.62C39.44 4 37.76 4 34.4 4h-8.8c-3.36 0-5.04 0-6.32.65a6 6 0 0 0-2.63 2.62C16 8.56 16 10.24 16 13.6V16h-2.4c-3.36 0-5.04 0-6.32.65a6 6 0 0 0-2.63 2.62C4 20.56 4 22.24 4 25.6v8.8c0 3.36 0 5.04.65 6.32a6 6 0 0 0 2.63 2.62c1.28.66 2.96.66 6.32.66h8.8c3.36 0 5.04 0 6.32-.66a6 6 0 0 0 2.63-2.62c.65-1.28.65-2.96.65-6.32V32Zm2.4-24h-8.8c-1.75 0-2.82 0-3.62.07a5.12 5.12 0 0 0-.86.13l-.03.02a2 2 0 0 0-.87.87l-.01.03a5.11 5.11 0 0 0-.14.86c-.07.8-.07 1.87-.07 3.62V16h2.4c3.36 0 5.04 0 6.32.65a6 6 0 0 1 2.63 2.62c.65 1.29.65 2.97.65 6.33V28h2.4c1.75 0 2.82 0 3.62-.07a5.14 5.14 0 0 0 .86-.14h.02v-.01a2 2 0 0 0 .88-.87l.01-.02v-.02l.04-.12c.03-.14.07-.36.1-.74.07-.8.07-1.87.07-3.61v-8.8c0-1.75 0-2.82-.07-3.62a5.11 5.11 0 0 0-.15-.89 2 2 0 0 0-.87-.87l-.03-.02a5.12 5.12 0 0 0-.86-.14C37.22 8 36.15 8 34.4 8ZM13.6 20h8.8c1.75 0 2.82 0 3.62.07a5.14 5.14 0 0 1 .86.13l.03.02a2 2 0 0 1 .88.9 5.11 5.11 0 0 1 .14.86c.07.8.07 1.87.07 3.62v8.8c0 1.74 0 2.81-.07 3.61a5.11 5.11 0 0 1-.14.86v.04a2 2 0 0 1-.88.87.24.24 0 0 1-.03.01l-.13.04c-.14.03-.36.07-.73.1-.8.06-1.87.07-3.62.07h-8.8c-1.75 0-2.82 0-3.62-.07a5.14 5.14 0 0 1-.86-.14l-.03-.01a2 2 0 0 1-.87-.87l-.01-.04-.04-.12a5.12 5.12 0 0 1-.1-.74C8 37.21 8 36.14 8 34.4v-8.8c0-1.75 0-2.82.07-3.62a5.13 5.13 0 0 1 .15-.89 2 2 0 0 1 .87-.87l.03-.02.13-.03c.14-.03.36-.07.73-.1.8-.07 1.87-.07 3.62-.07Z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <!-- ============================================ -->
+        <!-- FIN ZONA EDITABLE -->
+        <!-- ============================================ -->
+        
+        <!-- BARRA DE BÚSQUEDA / USUARIO TIKTOK -->
+        <div style="margin-bottom:16px;" id="searchUserSection">
+          <div class="search-input-wrapper" style="max-width:500px;">
+            <input placeholder="Ingresa tu usuario de TikTok (ej: @usuario)" type="search" autocomplete="off" class="search-input" id="tiktokUserInput" value="">
+            <span class="search-splitter"></span>
+            <button type="submit" aria-label="Buscar usuario TikTok" class="search-btn" id="tiktokUserSearchBtn">
+              <svg width="24" height="24" viewBox="0 0 48 48" fill="rgba(22,24,35,.34)">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M22 10C15.3726 10 10 15.3726 10 22C10 28.6274 15.3726 34 22 34C28.6274 34 34 28.6274 34 22C34 15.3726 28.6274 10 22 10ZM6 22C6 13.1634 13.1634 6 22 6C30.8366 6 38 13.1634 38 22C38 25.6974 36.7458 29.1019 34.6397 31.8113L43.3809 40.5565C43.7712 40.947 43.7712 41.5801 43.3807 41.9705L41.9665 43.3847C41.5759 43.7753 40.9426 43.7752 40.5521 43.3846L31.8113 34.6397C29.1019 36.7458 25.6974 38 22 38C13.1634 38 6 30.8366 6 22Z"/>
+              </svg>
+            </button>
+          </div>
+          <!-- Perfil consultado -->
+          <div id="tiktokProfileResult" style="display:none;margin-top:12px;padding:14px;background:rgba(22,24,35,0.03);border-radius:12px;">
+            <div style="display:flex;align-items:center;gap:12px;">
+              <img src="" id="profileAvatarResult" style="width:44px;height:44px;border-radius:50%;object-fit:cover;background:#d0d1d3;display:none;" onerror="this.style.display='none'" onload="this.style.display='block'">
+              <div style="flex:1;">
+                <div style="font-size:15px;font-weight:600;color:#161823;" id="profileUsernameResult">@usuario</div>
+                <div style="display:flex;gap:12px;margin-top:4px;font-size:12px;color:rgba(22,24,35,0.65);" id="profileStatsResult">
+                  <span>👥 <strong id="statFollowers">0</strong> seguidores</span>
+                  <span>👤 <strong id="statFollowing">0</strong> seguidos</span>
+                  <span>❤️ <strong id="statLikes">0</strong> likes</span>
+                </div>
+              </div>
+              <div id="profileStatusBadge" style="font-size:11px;padding:2px 8px;border-radius:999px;background:rgba(34,197,94,0.1);color:#22c55e;font-weight:600;white-space:nowrap;">✓ Cargado</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TOP BAR -->
+      <div class="top-bar">
+        <div class="coin-list-title">
+          Recarga: <strong class="recharge-advantage-info">
+            Ahorra un 25&nbsp;% con una tarifa de servicio de terceros más baja.
+            <span class="info-icon">
+              <svg fill="currentColor" viewBox="0 0 48 48" width="16" height="16">
+                <path d="M24 6a18 18 0 1 0 0 36 18 18 0 0 0 0-36ZM2 24a22 22 0 1 1 44 0 22 22 0 0 1-44 0Zm25-8a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-4 6a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V23a1 1 0 0 0-1-1h-2Z"/>
+              </svg>
+            </span>
+          </strong>
+        </div>
+      </div>
+
+      <!-- COIN LIST -->
+      <ul class="coin-list" id="coinList">
+        <!-- Rendered by JS -->
+      </ul>
+
+      <!-- TOTAL & BUY -->
+      <div class="total-section">
+        <span class="total-label">Total</span>
+        <strong class="total-price" id="totalPrice">COP0</strong>
+      </div>
+      <div class="buy-btn-wrapper">
+        <button class="buy-btn" type="button" id="mainBuyBtn">Recargar</button>
+      </div>
+
+      <!-- SECURE PAYMENT -->
+      <div class="secure-payment">
+        <svg xmlns="http://www.w3.org/2000/svg" width="65" height="27" fill="none" viewBox="0 0 65 27">
+          <rect width="63" height="26" x="1.287" y="0.5" fill="#60A901" fill-opacity="0.1" rx="13"/>
+          <path fill="#8BC73F" fill-rule="evenodd" d="M13.736 8.421a.484.484 0 0 1 .674 0c.177.173.472.349.854.515a9.5 9.5 0 0 0 1.202.414 16 16 0 0 0 1.467.332l.022.004h.005c.23.038.399.232.399.46v.168l-.002.473c-.002.408-.006.99-.015 1.687 0 2.007-.9 3.456-1.856 4.395a6.6 6.6 0 0 1-1.383 1.043 4 4 0 0 1-.558.264 1.4 1.4 0 0 1-.472.11 1.4 1.4 0 0 1-.472-.11 4 4 0 0 1-.558-.264 6.6 6.6 0 0 1-1.383-1.043c-.957-.939-1.855-2.387-1.856-4.394a175 175 0 0 1-.016-2.129v-.2c0-.228.168-.422.397-.46h.006l.022-.004a10 10 0 0 0 .414-.079c.275-.056.65-.141 1.053-.253a9.5 9.5 0 0 0 1.203-.414c.382-.166.676-.342.853-.515m2.287 3.49a.24.24 0 0 1-.01.336l-2.089 1.98a.476.476 0 0 1-.646.007l-1.013-.912a.24.24 0 0 1-.018-.336l.319-.354a.24.24 0 0 1 .336-.018l.687.618 1.77-1.676a.24.24 0 0 1 .336.009z" clip-rule="evenodd"/>
+          <path fill="#161823" d="M24.505 12.096q-1.425 0-2.272-.848l.624-.888q.697.728 1.696.728.448 0 .688-.168.24-.176.24-.424 0-.216-.232-.352a1.6 1.6 0 0 0-.568-.208 9 9 0 0 1-.736-.176 6 6 0 0 1-.744-.272 1.4 1.4 0 0 1-.568-.48 1.4 1.4 0 0 1-.224-.8q0-.689.552-1.152.552-.472 1.472-.472 1.272 0 2.08.744l-.632.848q-.632-.584-1.552-.584-.352 0-.552.144a.45.45 0 0 0-.2.384q0 .192.224.32.232.128.568.2.345.064.736.184.4.12.736.28.345.152.568.488.232.329.232.792 0 .768-.552 1.24-.544.472-1.584.472M31.174 12h-3.776V6.664h3.776v1h-2.64v1.12h2.584v1h-2.584V11h2.64zm3.48.096q-1.224 0-2.04-.768-.808-.776-.808-1.992 0-1.224.808-1.992.816-.768 2.04-.768 1.496 0 2.224 1.304l-.976.48a1.43 1.43 0 0 0-.52-.552 1.3 1.3 0 0 0-.728-.224q-.728 0-1.208.496-.472.496-.472 1.256t.472 1.256q.48.496 1.208.496.392 0 .728-.216.345-.225.52-.56l.976.472q-.744 1.312-2.224 1.312m7.1-.6q-.607.6-1.792.6t-1.8-.6q-.608-.608-.608-1.632v-3.2h1.152v3.168q0 .575.328.92.328.336.928.336t.92-.336q.328-.344.328-.92V6.664h1.16v3.2q0 1.024-.616 1.632m6.003.504h-1.312l-1.048-1.896h-.832V12H43.43V6.664h2.496q.825 0 1.312.48t.488 1.24q0 .656-.352 1.064a1.5 1.5 0 0 1-.824.52zm-1.992-2.896q.345 0 .568-.192a.68.68 0 0 0 .224-.536.64.64 0 0 0-.224-.512.82.82 0 0 0-.568-.2h-1.2v1.44zM52.345 12H48.57V6.664h3.776v1h-2.64v1.12h2.584v1h-2.584V11h2.64z"/>
+          <path fill="#161823" fill-opacity="0.6" d="M23.361 20h-.664v-5.336h2.144q.776 0 1.224.464t.448 1.144-.456 1.144q-.448.465-1.216.464h-1.48zm1.4-2.712q.472 0 .768-.28a.98.98 0 0 0 .296-.736.96.96 0 0 0-.296-.728q-.295-.288-.768-.288h-1.4v2.032zM30.228 20h-.6v-.44q-.472.536-1.28.536a1.4 1.4 0 0 1-.936-.344q-.408-.344-.408-.936 0-.615.4-.944t.944-.328q.815 0 1.28.52v-.696q0-.375-.272-.592t-.704-.216q-.696 0-1.184.536l-.28-.416q.615-.64 1.544-.64.665 0 1.08.32t.416.984zm-1.656-.336q.712 0 1.056-.48v-.736q-.353-.472-1.056-.472-.424 0-.696.24a.76.76 0 0 0-.264.6q0 .375.264.616.271.232.696.232m2.659 1.848.088-.544a.8.8 0 0 0 .328.064q.207 0 .344-.088t.232-.32l.256-.584-1.616-3.904h.656l1.28 3.168 1.288-3.168h.648l-1.936 4.648q-.32.768-1.136.784-.249 0-.432-.056M40.624 20h-.6v-2.624q0-.8-.712-.8-.287 0-.575.176a1.3 1.3 0 0 0-.449.416V20h-.6v-2.624q0-.8-.712-.8-.28 0-.568.176a1.5 1.5 0 0 0-.447.424V20h-.6v-3.864h.6v.56q.15-.232.504-.44.36-.216.752-.216.416 0 .68.2a.95.95 0 0 1 .352.52q.175-.288.535-.504t.76-.216q1.08 0 1.08 1.168zm2.95.096q-.873 0-1.425-.56-.552-.569-.552-1.472 0-.848.544-1.432a1.77 1.77 0 0 1 1.36-.592q.857 0 1.352.592.504.585.504 1.48v.152h-3.12q.04.568.408.952.376.384.976.384.72 0 1.2-.496l.288.392q-.615.6-1.536.6m1.191-2.28a1.37 1.37 0 0 0-.336-.88q-.327-.4-.936-.4-.576 0-.912.392a1.46 1.46 0 0 0-.352.888zM49.537 20h-.592v-2.528q0-.488-.224-.688-.224-.208-.648-.208-.336 0-.648.176a1.6 1.6 0 0 0-.496.424V20h-.6v-3.864h.6v.56q.225-.272.6-.464.376-.192.784-.192 1.224 0 1.224 1.248zm2.19.096q-.864 0-.864-.904v-2.528h-.64v-.528h.64V15.08h.608v1.056h.784v.528h-.784v2.4q0 .225.096.36.105.136.288.136.257 0 .408-.168l.176.456q-.264.248-.712.248"/>
+          <rect width="63" height="26" x="1.287" y="0.5" stroke="#60A901" rx="13"/>
+        </svg>
+        <span>Pago seguro proporcionado por</span>
+      </div>
+
+      <!-- BANNER -->
+      <div class="banner-container">
+        <div class="banner-content">
+          <div class="banner-left">
+            <div class="banner-icon">
+              <img src="https://sf16-sg.tiktokcdn.com/obj/eden-sg/lm_alsshd_rvarpa/ljhwZthlaukjlkulzlp/referral/icon_invite_rewards.png" alt="sage" height="43" width="56">
+            </div>
+            <div class="banner-text">
+              <span class="banner-title">Invita y consigue recompensas</span>
+              <span class="banner-subtitle">¡Echa un vistazo a esta nueva función!</span>
+            </div>
+          </div>
+          <span class="banner-arrow">
+            <svg fill="currentColor" viewBox="0 0 48 48" width="16" height="16">
+              <path d="M28.74 24 15.08 10.33a1 1 0 0 1 0-1.41l1.84-1.84a1 1 0 0 1 1.41 0L34.54 23.3a1 1 0 0 1 0 1.42l-16.2 16.21a1 1 0 0 1-1.42 0l-1.84-1.84a1 1 0 0 1 0-1.41L28.74 24Z"/>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ BUTTON -->
+<div class="faq-float-btn">
+  <button class="faq-btn" aria-label="FAQ">
+    <svg fill="currentColor" viewBox="0 0 48 48" width="28" height="28">
+      <path d="M21.36 28.05V22.8l1.79-.1c2.33-.1 3.87-1.36 3.87-3.31s-1.31-3-3.33-3c-1.95 0-3.53.95-3.88 3.1l-4.31-.7c.54-3.98 3.78-6.28 8.54-6.28 4.5 0 7.66 2.66 7.66 6.75 0 3.3-2.18 5.66-5.58 6.3v2.5h-4.76ZM20.62 32.72a2.99 2.99 0 0 1 3.07-3.04 2.96 2.96 0 0 1 3.04 3.04c0 1.7-1.28 3.01-3.04 3.01a2.98 2.98 0 0 1-3.07-3Z"/>
+      <path d="M2 24a22 22 0 1 1 44 0 22 22 0 0 1-44 0Zm22 18a18 18 0 1 0 0-36 18 18 0 0 0 0 36Z"/>
+    </svg>
+  </button>
+</div>
+
+<!-- BOTTOM SHEET OVERLAY -->
+<div class="sheet-overlay" onclick="cerrarSheet()"></div>
+
+<!-- BOTTOM SHEET PREMIUM -->
+<div class="bottom-sheet" id="purchaseSheet">
+  <div class="sheet-handle"></div>
+  <div class="sheet-content">
+    <div class="sheet-title" id="sheetTitle">Personalizar recarga</div>
+
+    <!-- Perfil TikTok consultado (aparece arriba de todo) -->
+    <div id="sheetProfileSection" style="display:none;margin-bottom:16px;padding:14px;background:rgba(22,24,35,0.03);border-radius:12px;">
+      <div style="display:flex;align-items:center;gap:12px;">
+        <img src="" id="sheetProfileAvatar" style="width:48px;height:48px;border-radius:50%;object-fit:cover;background:#d0d1d3;">
+        <div style="flex:1;">
+          <div style="font-size:15px;font-weight:600;color:#161823;" id="sheetProfileUsername">@usuario</div>
+          <div style="display:flex;gap:12px;margin-top:4px;font-size:12px;color:rgba(22,24,35,0.65);">
+            <span>👥 <strong id="sheetStatFollowers">0</strong></span>
+            <span>👤 <strong id="sheetStatFollowing">0</strong></span>
+            <span>❤️ <strong id="sheetStatLikes">0</strong></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Amount Display -->
+    <div class="amount-display">
+      <div class="currency-label">Monto a recargar</div>
+      <div class="amount" id="displayAmount">0</div>
+      <div class="amount-sub">Equivalente a <strong id="coinEquiv">0 monedas</strong></div>
+    </div>
+
+    <!-- Quantity Selector -->
+    <div class="quantity-selector">
+      <button class="qty-btn" onclick="ajustarCantidad(-1)">−</button>
+      <div class="qty-value" id="qtyValue">1</div>
+      <button class="qty-btn" onclick="ajustarCantidad(1)">+</button>
+    </div>
+
+    <!-- Quick amounts -->
+    <div class="quick-amounts">
+      <button class="quick-amount-btn" onclick="fijarMonto(5000)">$5,000</button>
+      <button class="quick-amount-btn" onclick="fijarMonto(10000)">$10,000</button>
+      <button class="quick-amount-btn" onclick="fijarMonto(25000)">$25,000</button>
+      <button class="quick-amount-btn" onclick="fijarMonto(50000)">$50,000</button>
+    </div>
+
+    <!-- Keypad -->
+    <div class="keypad">
+      <button class="keypad-key" onclick="tecla('1')">1</button>
+      <button class="keypad-key" onclick="tecla('2')">2</button>
+      <button class="keypad-key" onclick="tecla('3')">3</button>
+      <button class="keypad-key" onclick="tecla('4')">4</button>
+      <button class="keypad-key" onclick="tecla('5')">5</button>
+      <button class="keypad-key" onclick="tecla('6')">6</button>
+      <button class="keypad-key" onclick="tecla('7')">7</button>
+      <button class="keypad-key" onclick="tecla('8')">8</button>
+      <button class="keypad-key" onclick="tecla('9')">9</button>
+      <button class="keypad-key clear" onclick="montoPersonalizado='';actualizarSheet();">C</button>
+      <button class="keypad-key" onclick="tecla('0')">0</button>
+      <button class="keypad-key clear" onclick="borrar()">⌫</button>
+    </div>
+
+    <!-- Summary -->
+    <div class="summary">
+      <div class="summary-row">
+        <span class="label">Paquete</span>
+        <span class="value" id="resumenPaquete">-</span>
+      </div>
+      <div class="summary-row">
+        <span class="label">Cantidad</span>
+        <span class="value" id="resumenCantidad">1</span>
+      </div>
+      <div class="summary-row">
+        <span class="label">Monto</span>
+        <span class="value" id="resumenMonto">COP 0</span>
+      </div>
+      <div class="summary-divider"></div>
+      <div class="summary-row total">
+        <span class="label">Total</span>
+        <span class="value" id="resumenTotal">COP 0</span>
+      </div>
+    </div>
+
+    <!-- Payment Methods -->
+    <div class="sheet-payment-title">Método de pago</div>
+    <div class="sheet-payment-grid" id="paymentMethods"></div>
+
+    <button class="confirm-btn" id="btnConfirmar">✓ Confirmar compra</button>
+    <button class="confirm-btn-secondary" onclick="cerrarSheet()">Cancelar</button>
+  </div>
+</div>
+
+<!-- SUCCESS OVERLAY -->
+<div class="success-overlay" id="successOverlay">
+  <div class="success-check">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12"/>
+    </svg>
+  </div>
+  <div class="success-title">¡Compra exitosa!</div>
+  <div class="success-amount" id="successAmount">COP 0</div>
+  <div class="success-subtitle" id="successDesc">Se han añadido 0 monedas a tu cuenta</div>
+  <button class="success-btn" onclick="cerrarSuccess()">Continuar</button>
+</div>
+
+<!-- SVG DEFS -->
+<svg style="display:none;" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <g id="coin-svg">
+      <path d="M48 24a24 24 0 1 1-48 0 24 24 0 0 1 48 0Z" fill="#FFB84D"/>
+      <path d="M47 24a23 23 0 1 1-46 0 23 23 0 0 1 46 0Z" fill="#FFDE55"/>
+      <path d="M42 24a18 18 0 1 1-36 0 18 18 0 0 1 36 0Z" fill="#F7A300"/>
+      <path d="M42 24a18 18 0 1 1-36 0 18 18 0 0 1 36 0Z" fill="#F7A80F"/>
+      <path d="M41.94 25.5a18 18 0 1 0-35.88 0 18 18 0 0 1 35.88 0Z" fill="#E88B00"/>
+      <path d="M41.94 25.5a18 18 0 1 0-35.88 0 18 18 0 0 1 35.88 0Z" fill="#F09207"/>
+      <path d="M34.74 17.77v5.86c-2.06 0-4.05-.44-5.81-1.55v7.2a7.79 7.79 0 0 1-7.84 7.75 7.79 7.79 0 0 1-7.8-8.35 7.79 7.79 0 0 1 9.19-8.24v6c-.47-.13-.9-.26-1.39-.26a3.14 3.14 0 0 0-3.09 2.5 3.14 3.14 0 0 0 3.1 2.5c1.74 0 3.14-1.4 3.14-3.11V12.03h4.69a5.6 5.6 0 0 0 5.81 5.74Z" fill="#F09207"/>
+      <path d="M34.34 18.18a5.78 5.78 0 0 1-5.82-5.74h-3.87v15.63c0 1.94-1.6 3.5-3.56 3.5a3.53 3.53 0 0 1-3.55-3.5 3.53 3.53 0 0 1 4.52-3.38v-3.9a7.38 7.38 0 0 0-8.4 7.28 7.38 7.38 0 0 0 7.43 7.34c4.1 0 7.43-3.29 7.43-7.34v-7.98a9.73 9.73 0 0 0 5.82 1.92v-3.83Z" fill="#fff"/>
+    </g>
+  </defs>
+</svg>
+
+<script>
+// Datos
+const paquetes = [
+  { monedas: 30, precio: 1260, etiqueta: '30 Monedas' },
+  { monedas: 350, precio: 14700, etiqueta: '350 Monedas' },
+  { monedas: 700, precio: 29300, etiqueta: '700 Monedas' },
+  { monedas: 1400, precio: 58600, etiqueta: '1,400 Monedas' },
+  { monedas: 3500, precio: 146400, etiqueta: '3,500 Monedas' },
+  { monedas: 7000, precio: 292800, etiqueta: '7,000 Monedas' },
+  { monedas: 17500, precio: 732000, etiqueta: '17,500 Monedas' },
+  { monedas: 0, precio: 0, etiqueta: 'Personalizar', personalizado: true },
+];
+
+// SVG inline para iconos de pago reales
+const svgPayments = {
+  apple: '<svg viewBox="0 0 24 24" fill="none" width="24" height="24"><path d="M17.05 12.73c.02 3.68 3.23 4.9 3.27 4.92-.03.1-.51 1.75-1.69 3.47-1.02 1.49-2.08 2.97-3.75 3-1.64.03-2.17-.97-4.05-.97-1.87 0-2.46.94-4.01.97-1.61.03-2.84-1.62-3.87-3.1-2.1-3.05-3.72-8.62-1.56-12.38C5.19 6.6 6.73 5.65 8.4 5.6c1.64-.05 3.19 1.1 4.2 1.1 1 0 2.88-1.36 4.85-1.16.83.03 3.15.33 4.64 2.5-.12.07-2.77 1.62-2.74 4.83l.1-.14zM14.25 4.3c.78-.94 1.3-2.25 1.16-3.56-1.12.05-2.48.74-3.29 1.68-.72.83-1.35 2.16-1.18 3.43 1.25.1 2.53-.63 3.31-1.55z" fill="#000"/></svg>',
+  visa: '<svg viewBox="0 0 24 24" fill="none" width="24" height="24"><path d="M9.5 15.5l1-6h1.6l-1 6H9.5zm6.8-5.6c-.3-.3-.8-.5-1.6-.5-1.8 0-3 1-3 2.4 0 1 .9 1.6 1.6 2 .7.3.9.5.9.7 0 .4-.5.6-1 .6-.7 0-1-.1-1.6-.4l-.2-.1-.3 1.5c.5.2 1.4.4 2.3.4 2 0 3.2-1 3.2-2.5 0-.8-.5-1.5-1.6-2-.7-.4-1.1-.6-1.1-1 0-.3.4-.7 1.1-.7.5 0 .9.1 1.2.3l.2.1.3-1.4zm5.6-.4H23l-1.3 6h-1.4l.2-.9c-.4.5-1 .8-2 .8-1.6 0-2.7-1.2-2.7-2.8 0-2.2 1.6-3.9 3.8-3.9 1 0 1.7.3 2.2.7l-.4-1.5zM4.5 9.5l-1.7 4.4-.2-.9c-.4-1.2-1.4-2-2.6-2.3l1.5 5.8h1.8L6 9.5H4.5z" fill="#1A1F71"/></svg>',
+  mastercard: '<svg viewBox="0 0 24 24" fill="none" width="24" height="24"><circle cx="9" cy="12" r="5" fill="#EB001B"/><circle cx="15" cy="12" r="5" fill="#F79E1B" opacity="0.8"/><path d="M12 8.5a5 5 0 000 7 5 5 0 000-7z" fill="#FF5F00"/></svg>',
+  paypal: '<svg viewBox="0 0 24 24" fill="none" width="24" height="24"><path d="M17.5 6.5c-1-1-2.5-1.5-4.5-1.5H8.5c-.5 0-1 .4-1.1.9l-2 12c-.1.4.2.7.6.7h3.5l.8-5h2.5c2 0 3.5-.5 4.5-1.5 1-1 1.5-2.5 1.5-4.5 0-1-.5-2-1.3-3.1z" fill="#003087"/><path d="M18 8.5c-.1.3-.3.6-.5.9-.9 1.3-2.4 2-4.5 2h-2.5l-.8 5H7l2.5-15h4.5c2 0 3.5.5 4.5 1.5.8.8 1.2 1.9 1.2 3.1 0 .9-.2 1.7-.7 2.5z" fill="#009CDE"/><path d="M17.5 6.5c-1-1-2.5-1.5-4.5-1.5H8.5c-.5 0-1 .4-1.1.9l-2 12c-.1.4.2.7.6.7h3.5l.8-5h2.5c2 0 3.5-.5 4.5-1.5 1-1 1.5-2.5 1.5-4.5 0-1-.5-2-1.3-3.1z" fill="#003087"/><path d="M18 8.5c-.1.3-.3.6-.5.9-.9 1.3-2.4 2-4.5 2h-2.5l-.8 5H7l2.5-15h4.5c2 0 3.5.5 4.5 1.5.8.8 1.2 1.9 1.2 3.1 0 .9-.2 1.7-.7 2.5z" fill="#009CDE"/></svg>',
+  crypto: '<svg viewBox="0 0 24 24" fill="none" width="24" height="24"><circle cx="12" cy="12" r="10" fill="#F7931A"/><text x="12" y="16" text-anchor="middle" fill="white" font-size="12" font-weight="bold">₿</text></svg>',
+  bank: '<svg viewBox="0 0 24 24" fill="none" width="24" height="24"><path d="M12 2L2 7v2h20V7l-10-5zm-8 9v8h2v-8H4zm4 0v8h2v-8H8zm4 0v8h2v-8h-2zm4 0v8h2v-8h-2zm4 0v8h2v-8h-2zM2 19h20v2H2v-2z" fill="#555"/></svg>',
+};
+
+const metodosPago = [
+  { id: 'apple', nombre: 'Apple Pay', svg: svgPayments.apple },
+  { id: 'visa', nombre: 'Visa', svg: svgPayments.visa },
+  { id: 'mastercard', nombre: 'Mastercard', svg: svgPayments.mastercard },
+  { id: 'paypal', nombre: 'PayPal', svg: svgPayments.paypal },
+  { id: 'crypto', nombre: 'Crypto', svg: svgPayments.crypto },
+  { id: 'bank', nombre: 'Banco', svg: svgPayments.bank },
+];
+
+let seleccionado = 0;
+let pagoSeleccionado = 'apple';
+let montoPersonalizado = '';
+let cantidad = 1;
+let totalCompra = 1260;
+
+function renderizarMonedas() {
+  const lista = document.getElementById('coinList');
+  lista.innerHTML = paquetes.map((p, i) => {
+    const activo = i === seleccionado ? 'selected' : '';
+    return `
+      <li>
+        <button type="button" class="coin-item ${activo}" data-indice="${i}">
+          <div class="coin-item-header">
+            <span class="coin-icon">
+              <svg class="coin-svg-icon" viewBox="0 0 48 48" fill="currentColor"><use href="#coin-svg"/></svg>
+            </span>
+            <b class="coin-num">${p.personalizado ? 'Personalizar' : p.monedas.toLocaleString('es-CO')}</b>
+          </div>
+          <div class="coin-price">${p.personalizado ? 'Se admiten importes grandes' : 'COP' + p.precio.toLocaleString('es-CO')}</div>
+        </button>
+      </li>
+    `;
+  }).join('');
+
+  document.querySelectorAll('.coin-item').forEach((item, i) => {
+    item.addEventListener('click', function() {
+      document.querySelectorAll('.coin-item').forEach(el => el.classList.remove('selected'));
+      this.classList.add('selected');
+      seleccionado = i;
+      const p = paquetes[i];
+      if (p.personalizado) {
+        montoPersonalizado = '';
+        cantidad = 1;
+        actualizarSheet();
+        document.querySelector('.sheet-overlay').classList.add('open');
+        document.querySelector('.bottom-sheet').classList.add('open');
+        return;
+      }
+      totalCompra = p.precio;
+      document.getElementById('totalPrice').textContent = 'COP' + p.precio.toLocaleString('es-CO');
+    });
+  });
+}
+
+function renderizarPagos() {
+  const contenedor = document.getElementById('paymentMethods');
+  if (!contenedor) return;
+  contenedor.innerHTML = metodosPago.map(p => `
+    <div class="payment-card ${pagoSeleccionado === p.id ? 'selected' : ''}" onclick="seleccionarPago('${p.id}')">
+      <span class="pm-icon">${p.svg}</span>
+      <span class="pm-name">${p.nombre}</span>
+    </div>
+  `).join('');
+}
+
+function seleccionarPago(id) {
+  pagoSeleccionado = id;
+  document.querySelectorAll('.payment-card').forEach(c => c.classList.remove('selected'));
+  document.querySelectorAll('.payment-card').forEach(c => {
+    if (c.querySelector('.pm-name')?.textContent === metodosPago.find(p => p.id === id)?.nombre) {
+      c.classList.add('selected');
+    }
+  });
+}
+
+// Keypad
+function tecla(digito) {
+  if (digito === '.' && montoPersonalizado.includes('.')) return;
+  if (montoPersonalizado.length < 10) montoPersonalizado += digito;
+  actualizarSheet();
+}
+function borrar() {
+  montoPersonalizado = montoPersonalizado.slice(0, -1);
+  actualizarSheet();
+}
+function fijarMonto(val) {
+  montoPersonalizado = val.toString();
+  actualizarSheet();
+}
+function ajustarCantidad(delta) {
+  cantidad = Math.max(1, cantidad + delta);
+  actualizarSheet();
+}
+
+function actualizarSheet() {
+  const monto = parseInt(montoPersonalizado) || 0;
+  const p = paquetes[seleccionado];
+  const esPersonalizado = p && p.personalizado;
+  const usuarioEscribio = montoPersonalizado.length > 0;
+  
+  // Si el usuario escribió algo en el teclado, usar ese monto
+  // Si no, usar el precio del paquete * cantidad
+  if (usuarioEscribio) {
+    totalCompra = monto;
+  } else {
+    totalCompra = esPersonalizado ? 0 : (p.precio * cantidad);
+  }
+  
+  const monedasUnitario = p && !p.personalizado ? p.monedas : 0;
+  const totalMonedas = usuarioEscribio ? Math.floor(monto / 42) : (monedasUnitario * cantidad);
+
+  document.getElementById('displayAmount').textContent = totalCompra > 0 ? totalCompra.toLocaleString('es-CO') : '0';
+  document.getElementById('coinEquiv').textContent = totalMonedas.toLocaleString('es-CO') + ' monedas';
+  document.getElementById('qtyValue').textContent = esPersonalizado ? 1 : cantidad;
+  document.getElementById('resumenPaquete').textContent = esPersonalizado ? 'Personalizado' : (p ? p.etiqueta : '-');
+  document.getElementById('resumenCantidad').textContent = esPersonalizado ? 1 : cantidad;
+  document.getElementById('resumenMonto').textContent = 'COP ' + totalCompra.toLocaleString('es-CO');
+  document.getElementById('resumenTotal').textContent = 'COP ' + totalCompra.toLocaleString('es-CO');
+
+  const btn = document.getElementById('btnConfirmar');
+  if (btn) {
+    btn.textContent = totalCompra > 0 ? '✓ Pagar COP ' + totalCompra.toLocaleString('es-CO') : '✓ Confirmar compra';
+    btn.disabled = totalCompra <= 0;
+  }
+}
+
+function cerrarSheet() {
+  document.querySelector('.sheet-overlay').classList.remove('open');
+  document.querySelector('.bottom-sheet').classList.remove('open');
+}
+
+// Botón Recargar principal
+document.getElementById('mainBuyBtn')?.addEventListener('click', function() {
+  const p = paquetes[seleccionado];
+  if (p && p.personalizado) {
+    montoPersonalizado = '';
+  } else if (p) {
+    montoPersonalizado = p.precio.toString();
+  }
+  cantidad = 1;
+  actualizarSheet();
+  document.querySelector('.sheet-overlay').classList.add('open');
+  document.querySelector('.bottom-sheet').classList.add('open');
+});
+
+// Confirmar compra
+document.getElementById('btnConfirmar')?.addEventListener('click', function() {
+  if (totalCompra <= 0) return;
+  cerrarSheet();
+  setTimeout(() => mostrarSuccess(totalCompra), 400);
+});
+
+function mostrarSuccess(monto) {
+  const overlay = document.getElementById('successOverlay');
+  const p = paquetes[seleccionado];
+  const monedas = p && !p.personalizado ? (p.monedas * cantidad) : Math.floor(monto / 42);
+  document.getElementById('successAmount').textContent = 'COP ' + monto.toLocaleString('es-CO');
+  document.getElementById('successDesc').textContent = 'Se han añadido ' + monedas.toLocaleString('es-CO') + ' monedas a tu cuenta';
+  overlay.classList.add('show');
+}
+
+function cerrarSuccess() {
+  document.getElementById('successOverlay').classList.remove('show');
+}
+
+// Cargar datos del panel admin
+function cargarAdmin() {
+  const avatar = localStorage.getItem('tiktok_avatar');
+  const name = localStorage.getItem('tiktok_name');
+  const coins = localStorage.getItem('tiktok_coins');
+  
+  if (avatar) {
+    const img = document.getElementById('foto-perfil');
+    img.src = avatar;
+  }
+  if (name) document.getElementById('nombre-usuario').textContent = name;
+  if (coins) document.getElementById('saldo-monedas').textContent = coins;
+}
+
+function abrirAdminPerfil() {
+  window.location.href = 'admin.html';
+}
+
+// === BUSCADOR DE USUARIO TIKTOK (API REAL) ===
+let tiktokProfileData = null;
+
+function formatearNumero(num) {
+  if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
+  if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
+  return num.toString();
+}
+
+function buscarUsuarioTikTok(username) {
+  const resultDiv = document.getElementById('tiktokProfileResult');
+  const avatar = document.getElementById('profileAvatarResult');
+  const usernameEl = document.getElementById('profileUsernameResult');
+  const statFollowers = document.getElementById('statFollowers');
+  const statFollowing = document.getElementById('statFollowing');
+  const statLikes = document.getElementById('statLikes');
+  const statusBadge = document.getElementById('profileStatusBadge');
+  
+  const limpio = username.replace('@', '').trim();
+  if (!limpio) {
+    resultDiv.style.display = 'none';
+    tiktokProfileData = null;
+    return;
+  }
+  
+  // Estado de carga
+  statusBadge.textContent = '⏳ Cargando...';
+  statusBadge.style.background = 'rgba(254,44,85,0.1)';
+  statusBadge.style.color = '#fe2c55';
+  resultDiv.style.display = 'block';
+  
+  // ==================================================================
+  // FASE 1: Intentar API real de TikTok (funciona en Vercel)
+  // ==================================================================
+  const apiUrl = '/api/tiktok?user=' + encodeURIComponent(limpio);
+  
+  fetch(apiUrl)
+    .then(res => {
+      if (!res.ok) throw new Error('API no disponible');
+      return res.json();
+    })
+    .then(perfil => {
+      // API real funcionó - mostrar datos reales
+      tiktokProfileData = perfil;
+      mostrarPerfil(perfil, avatar, usernameEl, statFollowers, statFollowing, statLikes, statusBadge, resultDiv);
+    })
+    .catch(function(err) {
+      // ================================================================
+      // FASE 2: Fallback - usar datos simulados (modo local / offline)
+      // ================================================================
+      console.log('API no disponible, usando datos simulados:', err.message);
+      
+      const perfilesPredefinidos = {
+        'carlober__': {
+          avatar: 'https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/7326891247656222722~c5_100x100.jpeg?lk3s=a5d48078',
+          username: '@carlober__',
+          followers: 28400,
+          following: 854,
+          likes: 1520000
+        },
+        'tiktok': {
+          avatar: 'https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/7326891247656222722~c5_100x100.jpeg?lk3s=a5d48078',
+          username: '@tiktok',
+          followers: 78000000,
+          following: 356,
+          likes: 3200000000
+        }
+      };
+      
+      let perfil;
+      if (perfilesPredefinidos[limpio]) {
+        perfil = perfilesPredefinidos[limpio];
+      } else {
+        const seed = limpio.length + (limpio.charCodeAt(0) || 0);
+        const followers = (seed * 137 + 5000) % 100000 + 500;
+        perfil = {
+          avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=' + limpio + '&backgroundColor=b6e3f4,c0aede,d1d4f9',
+          username: '@' + limpio,
+          followers: followers,
+          following: Math.floor(Math.random() * 2000) + 50,
+          likes: followers * Math.floor(Math.random() * 40 + 5)
+        };
+      }
+      
+      tiktokProfileData = perfil;
+      mostrarPerfil(perfil, avatar, usernameEl, statFollowers, statFollowing, statLikes, statusBadge, resultDiv);
+    });
+}
+
+function mostrarPerfil(perfil, avatar, usernameEl, statFollowers, statFollowing, statLikes, statusBadge, resultDiv) {
+  if (perfil.avatar) {
+    avatar.src = perfil.avatar;
+    avatar.style.display = 'block';
+  } else {
+    avatar.style.display = 'none';
+  }
+  
+  usernameEl.textContent = perfil.username;
+  statFollowers.textContent = formatearNumero(perfil.followers);
+  statFollowing.textContent = formatearNumero(perfil.following);
+  statLikes.textContent = formatearNumero(perfil.likes);
+  
+  statusBadge.textContent = '✓ Cargado';
+  statusBadge.style.background = 'rgba(34,197,94,0.1)';
+  statusBadge.style.color = '#22c55e';
+  
+  resultDiv.style.display = 'block';
+}
+
+// Evento: buscar al hacer clic en la lupa
+document.getElementById('tiktokUserSearchBtn')?.addEventListener('click', function() {
+  const input = document.getElementById('tiktokUserInput');
+  if (input.value.trim()) buscarUsuarioTikTok(input.value.trim());
+});
+
+// Evento: buscar al presionar Enter
+document.getElementById('tiktokUserInput')?.addEventListener('keydown', function(e) {
+  if (e.key === 'Enter' && this.value.trim()) {
+    buscarUsuarioTikTok(this.value.trim());
+  }
+});
+
+// Al abrir el Bottom Sheet, si hay perfil consultado, mostrarlo
+function abrirSheetConPerfil() {
+  const sheetProfile = document.getElementById('sheetProfileSection');
+  if (tiktokProfileData) {
+    document.getElementById('sheetProfileAvatar').src = tiktokProfileData.avatar;
+    document.getElementById('sheetProfileUsername').textContent = tiktokProfileData.username;
+    document.getElementById('sheetStatFollowers').textContent = formatearNumero(tiktokProfileData.followers);
+    document.getElementById('sheetStatFollowing').textContent = formatearNumero(tiktokProfileData.following);
+    document.getElementById('sheetStatLikes').textContent = formatearNumero(tiktokProfileData.likes);
+    sheetProfile.style.display = 'block';
+  } else {
+    sheetProfile.style.display = 'none';
+  }
+}
+
+// Sobrescribir la apertura del sheet para incluir el perfil
+const originalClick = document.getElementById('mainBuyBtn')?.click;
+document.getElementById('mainBuyBtn')?.addEventListener('click', function() {
+  const p = paquetes[seleccionado];
+  if (p && p.personalizado) {
+    montoPersonalizado = '';
+  } else if (p) {
+    montoPersonalizado = p.precio.toString();
+  }
+  cantidad = 1;
+  actualizarSheet();
+  abrirSheetConPerfil();
+  document.querySelector('.sheet-overlay').classList.add('open');
+  document.querySelector('.bottom-sheet').classList.add('open');
+});
+
+// Init
+cargarAdmin();
+renderizarMonedas();
+renderizarPagos();
+document.getElementById('totalPrice').textContent = 'COP' + paquetes[0].precio.toLocaleString('es-CO');
+</script>
+
+</body>
+</html>
