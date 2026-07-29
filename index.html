@@ -922,59 +922,48 @@ function buscarUsuarioTikTok(username) {
   statusBadge.style.color = '#fe2c55';
   resultDiv.style.display = 'block';
   
-  // 1️⃣ Intentar API propia de Vercel
-  fetch('/api/tiktok?username=' + encodeURIComponent(limpio))
-    .then(r => { if (r.ok) return r.json(); throw new Error('fail'); })
-    .then(perfil => {
-      tiktokProfileData = perfil;
-      mostrarPerfil(perfil, avatar, usernameEl, statFollowers, statFollowing, statLikes, statusBadge, resultDiv);
+  // Llamar a la API pública de TikTok via proxy
+  fetch('https://api.allorigins.win/get?url=' + encodeURIComponent('https://www.tikwm.com/api/user/info?unique_id=' + limpio))
+    .then(r => r.json())
+    .then(data => {
+      const json = JSON.parse(data.contents);
+      if (json?.data?.user) {
+        const user = json.data.user;
+        const stats = json.data.stats;
+        const perfil = {
+          username: user.unique_id,
+          display_name: user.nickname,
+          avatar: user.avatar || user.avatar_small || user.avatar_medium,
+          followers: stats?.follower_count || 0,
+          following: stats?.following_count || 0,
+          likes: stats?.heart_count || 0,
+          videos: stats?.video_count || 0,
+          bio: user.signature || '',
+          verified: user.verify_type === 1,
+          source: 'realtime'
+        };
+        tiktokProfileData = perfil;
+        mostrarPerfil(perfil, avatar, usernameEl, statFollowers, statFollowing, statLikes, statusBadge, resultDiv);
+      } else {
+        throw new Error('No data');
+      }
     })
     .catch(() => {
-      // 2️⃣ Intentar API pública via proxy
-      fetch('https://api.allorigins.win/get?url=' + encodeURIComponent('https://www.tikwm.com/api/user/info?unique_id=' + limpio))
-        .then(r => r.json())
-        .then(data => {
-          try {
-            const json = JSON.parse(data.contents);
-            if (json?.data?.user) {
-              const user = json.data.user;
-              const stats = json.data.stats;
-              const perfil = {
-                username: '@' + user.unique_id,
-                nickname: user.nickname,
-                avatar: user.avatar || user.avatar_small || user.avatar_medium,
-                followers: stats?.follower_count || 0,
-                following: stats?.following_count || 0,
-                likes: stats?.heart_count || 0,
-                videos: stats?.video_count || 0,
-                bio: user.signature || '',
-                verified: user.verify_type === 1,
-                source: 'api'
-              };
-              tiktokProfileData = perfil;
-              mostrarPerfil(perfil, avatar, usernameEl, statFollowers, statFollowing, statLikes, statusBadge, resultDiv);
-              return;
-            }
-          } catch(e) {}
-          throw new Error('No data');
-        })
-        .catch(() => {
-          // 3️⃣ Fallback: datos simulados
-          const p = {
-            username: '@' + limpio,
-            nickname: limpio,
-            avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=' + limpio,
-            followers: Math.floor(Math.random() * 20000) + 500,
-            following: Math.floor(Math.random() * 1500) + 50,
-            likes: Math.floor(Math.random() * 500000) + 10000,
-            videos: Math.floor(Math.random() * 50) + 5,
-            bio: 'Creador de contenido en TikTok',
-            verified: false,
-            source: 'fallback'
-          };
-          tiktokProfileData = p;
-          mostrarPerfil(p, avatar, usernameEl, statFollowers, statFollowing, statLikes, statusBadge, resultDiv);
-        });
+      // Fallback: datos simulados
+      const p = {
+        username: '@' + limpio,
+        display_name: limpio,
+        avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=' + limpio,
+        followers: Math.floor(Math.random() * 20000) + 500,
+        following: Math.floor(Math.random() * 1500) + 50,
+        likes: Math.floor(Math.random() * 500000) + 10000,
+        videos: Math.floor(Math.random() * 50) + 5,
+        bio: 'Creador de contenido en TikTok',
+        verified: false,
+        source: 'fallback'
+      };
+      tiktokProfileData = p;
+      mostrarPerfil(p, avatar, usernameEl, statFollowers, statFollowing, statLikes, statusBadge, resultDiv);
     });
 }
 
