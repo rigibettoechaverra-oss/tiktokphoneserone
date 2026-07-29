@@ -922,61 +922,59 @@ function buscarUsuarioTikTok(username) {
   statusBadge.style.color = '#fe2c55';
   resultDiv.style.display = 'block';
   
-  // ==================================================================
-  // FASE 1: Intentar API real de TikTok (funciona en Vercel)
-  // ==================================================================
-  const apiUrl = '/api/tiktok?user=' + encodeURIComponent(limpio);
-  
-  fetch(apiUrl)
-    .then(res => {
-      if (!res.ok) throw new Error('API no disponible');
-      return res.json();
-    })
+  // 1️⃣ Intentar API propia de Vercel
+  fetch('/api/tiktok?user=' + encodeURIComponent(limpio))
+    .then(r => { if (r.ok) return r.json(); throw new Error('fail'); })
     .then(perfil => {
-      // API real funcionó - mostrar datos reales
       tiktokProfileData = perfil;
       mostrarPerfil(perfil, avatar, usernameEl, statFollowers, statFollowing, statLikes, statusBadge, resultDiv);
     })
-    .catch(function(err) {
-      // ================================================================
-      // FASE 2: Fallback - usar datos simulados (modo local / offline)
-      // ================================================================
-      console.log('API no disponible, usando datos simulados:', err.message);
-      
-      const perfilesPredefinidos = {
-        'carlober__': {
-          avatar: 'https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/7326891247656222722~c5_100x100.jpeg?lk3s=a5d48078',
-          username: '@carlober__',
-          followers: 28400,
-          following: 854,
-          likes: 1520000
-        },
-        'tiktok': {
-          avatar: 'https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/7326891247656222722~c5_100x100.jpeg?lk3s=a5d48078',
-          username: '@tiktok',
-          followers: 78000000,
-          following: 356,
-          likes: 3200000000
-        }
-      };
-      
-      let perfil;
-      if (perfilesPredefinidos[limpio]) {
-        perfil = perfilesPredefinidos[limpio];
-      } else {
-        const seed = limpio.length + (limpio.charCodeAt(0) || 0);
-        const followers = (seed * 137 + 5000) % 100000 + 500;
-        perfil = {
-          avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=' + limpio + '&backgroundColor=b6e3f4,c0aede,d1d4f9',
-          username: '@' + limpio,
-          followers: followers,
-          following: Math.floor(Math.random() * 2000) + 50,
-          likes: followers * Math.floor(Math.random() * 40 + 5)
-        };
-      }
-      
-      tiktokProfileData = perfil;
-      mostrarPerfil(perfil, avatar, usernameEl, statFollowers, statFollowing, statLikes, statusBadge, resultDiv);
+    .catch(() => {
+      // 2️⃣ Intentar API pública via proxy
+      fetch('https://api.allorigins.win/get?url=' + encodeURIComponent('https://www.tikwm.com/api/user/info?unique_id=' + limpio))
+        .then(r => r.json())
+        .then(data => {
+          try {
+            const json = JSON.parse(data.contents);
+            if (json?.data?.user) {
+              const user = json.data.user;
+              const stats = json.data.stats;
+              const perfil = {
+                username: '@' + user.unique_id,
+                nickname: user.nickname,
+                avatar: user.avatar || user.avatar_small || user.avatar_medium,
+                followers: stats?.follower_count || 0,
+                following: stats?.following_count || 0,
+                likes: stats?.heart_count || 0,
+                videos: stats?.video_count || 0,
+                bio: user.signature || '',
+                verified: user.verify_type === 1,
+                source: 'api'
+              };
+              tiktokProfileData = perfil;
+              mostrarPerfil(perfil, avatar, usernameEl, statFollowers, statFollowing, statLikes, statusBadge, resultDiv);
+              return;
+            }
+          } catch(e) {}
+          throw new Error('No data');
+        })
+        .catch(() => {
+          // 3️⃣ Fallback: datos simulados
+          const p = {
+            username: '@' + limpio,
+            nickname: limpio,
+            avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=' + limpio,
+            followers: Math.floor(Math.random() * 20000) + 500,
+            following: Math.floor(Math.random() * 1500) + 50,
+            likes: Math.floor(Math.random() * 500000) + 10000,
+            videos: Math.floor(Math.random() * 50) + 5,
+            bio: 'Creador de contenido en TikTok',
+            verified: false,
+            source: 'fallback'
+          };
+          tiktokProfileData = p;
+          mostrarPerfil(p, avatar, usernameEl, statFollowers, statFollowing, statLikes, statusBadge, resultDiv);
+        });
     });
 }
 
