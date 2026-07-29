@@ -1,5 +1,5 @@
-// api/tiktok.js - Scrapea tikvib.com para obtener datos reales de perfiles TikTok
-// tikvib.com muestra fotos, seguidores, seguidos y likes de cualquier usuario
+// api/tiktok.js - Obtiene datos REALES de TikTok via tikwm.com
+// Funciona comprobado: devuelve avatar, followers, following, likes reales
 
 module.exports = async function handler(req, res) {
     const { username } = req.query;
@@ -9,63 +9,32 @@ module.exports = async function handler(req, res) {
     if (!user) return res.status(400).json({ error: 'Usuario inválido' });
 
     try {
-        // Obtener la página del perfil en tikvib.com
-        const response = await fetch(`https://www.tikvib.com/${user}`, {
-            headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' }
-        });
+        const response = await fetch(
+            `https://www.tikwm.com/api/user/info?unique_id=${user}`,
+            { headers: { 'User-Agent': 'Mozilla/5.0' } }
+        );
 
-        if (!response.ok) {
-            return res.status(404).json({ error: 'Usuario no encontrado' });
+        const json = await response.json();
+
+        if (json?.data?.user && json?.data?.stats) {
+            const u = json.data.user;
+            const s = json.data.stats;
+            return res.status(200).json({
+                username: '@' + (u.uniqueId || user),
+                display_name: u.nickname || user,
+                avatar: u.avatarMedium || u.avatarLarger || u.avatarThumb || '',
+                followers: s.followerCount || 0,
+                following: s.followingCount || 0,
+                likes: s.heartCount || 0,
+                videos: s.videoCount || 0,
+                bio: u.signature || '',
+                verified: u.verified || false,
+                source: 'tikwm'
+            });
         }
 
-        const html = await response.text();
-
-        // Extraer los datos del JSON que tikvib incrusta en la página
-        // Buscar patrones como: "followerCount":12345
-        const followers = extraerNumero(html, /"followerCount"\s*:\s*(\d+)/);
-        const following = extraerNumero(html, /"followingCount"\s*:\s*(\d+)/);
-        const likes = extraerNumero(html, /"heartCount"\s*:\s*(\d+)/);
-        const videos = extraerNumero(html, /"videoCount"\s*:\s*(\d+)/);
-
-        // Extraer avatar
-        const avatarMatch = html.match(/avatar(?:Larger|Medium|Thumb)"\s*:\s*"([^"]+)"/);
-        const avatar = avatarMatch ? avatarMatch[1].replace(/\\u002F/g, '/').replace(/\\\//g, '/') : '';
-
-        // Extraer nickname
-        const nickMatch = html.match(/"nickname"\s*:\s*"([^"]+)"/);
-        const nickname = nickMatch ? nickMatch[1] : user;
-
-        // Extraer uniqueId
-        const idMatch = html.match(/"uniqueId"\s*:\s*"([^"]+)"/);
-        const uniqueId = idMatch ? idMatch[1] : user;
-
-        // Extraer bio
-        const bioMatch = html.match(/"signature"\s*:\s*"([^"]+)"/);
-        const bio = bioMatch ? bioMatch[1] : '';
-
-        // Extraer verified
-        const verifiedMatch = html.match(/"verified"\s*:\s*(true|false)/);
-        const verified = verifiedMatch ? verifiedMatch[1] === 'true' : false;
-
-        return res.status(200).json({
-            username: '@' + uniqueId,
-            display_name: nickname,
-            avatar: avatar,
-            followers: followers,
-            following: following,
-            likes: likes,
-            videos: videos,
-            bio: bio,
-            verified: verified,
-            source: 'tikvib'
-        });
-
+        return res.status(404).json({ error: 'Usuario no encontrado en TikTok' });
     } catch (error) {
         return res.status(500).json({ error: 'Error: ' + error.message });
     }
 };
-
-function extraerNumero(html, regex) {
-    const match = html.match(regex);
-    return match ? parseInt(match[1]) || 0 : 0;
-}
